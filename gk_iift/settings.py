@@ -5,7 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 CURRENT_FILE_PATH = os.path.dirname(__file__)
-PUBLIC_ROOT = os.path.join(CURRENT_FILE_PATH, '..\\public\\')
+PUBLIC_ROOT = os.path.join(os.path.join(CURRENT_FILE_PATH, '..'), 'public')
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
