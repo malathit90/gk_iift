@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'gk_iift.views.home', name='home'),
+    url(r'^', include('gk_ques_answers.urls')),
     # url(r'^gk_iift/', include('gk_iift.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -1,10 +1,11 @@
 import os
 
 # Django settings for gk_iift project.
-
-PROJECT_DIR = os.path.dirname(__file__)
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+CURRENT_FILE_PATH = os.path.dirname(__file__)
+PUBLIC_ROOT = os.path.join(CURRENT_FILE_PATH, '..\\public\\')
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -107,9 +108,11 @@ ROOT_URLCONF = 'gk_iift.urls'
 WSGI_APPLICATION = 'gk_iift.wsgi.application'
 
 TEMPLATE_DIRS = (
+    os.path.join(PUBLIC_ROOT, 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    #os.path.join(PUBLIC_DIR,'templates'),
 )
 
 INSTALLED_APPS = (
