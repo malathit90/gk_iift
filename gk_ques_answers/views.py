@@ -11,4 +11,5 @@ def retrieve_ques(request, question_type, start_id, end_id):
         ques_ans['Q'] = a_record.question
         ques_ans['A'] = a_record.answer
         json_to_print.append(ques_ans)
+        ques_ans = {}
     return HttpResponse(simplejson.dumps(json_to_print), mimetype='application/json')
