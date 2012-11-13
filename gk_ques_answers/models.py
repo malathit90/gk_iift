@@ -6,6 +6,8 @@ class question_type(models.Model):
     type_name = models.CharField('Specify Question Type',max_length = 100)
     def __unicode__(self):
         return self.type_name
+    def to_string(self):
+        return self.type_name
     
 class questions(models.Model):
     question = models.CharField('Question',max_length = 300)
